@@ -1,0 +1,81 @@
+[cursor]
+
+# Project Organization and Documentation Guidelines
+
+## Documentation Best Practices
+
+1. All feature documentation should be placed in the docs/ folder
+2. Each feature requires a markdown file with:
+   - Detailed description
+   - Purpose statement
+   - Mermaid diagram using theme colors (dark gray and light purple)
+3. Use consistent naming convention: feature_name.md
+4. Keep documentation up-to-date with code changes
+5. Include usage examples where appropriate
+6. Reference architecture diagrams when explaining component interactions
+
+## Code Structure
+
+1. Maintain the established project hierarchy:
+   - src/agents/ - Agent definitions and core logic
+   - src/tools/ - Individual analysis tools
+   - src/config/ - Configuration settings
+   - src/utils/ - Utility functions
+   - tests/ - Unit and integration tests
+2. Each tool should be implemented in a separate file with a consistent structure
+3. Follow single responsibility principle - one class/module for one functionality
+4. Keep class and file names descriptive and consistent with their purpose
+
+## Code Style
+
+1. Follow PEP 8 style guidelines for Python code
+2. Use Black for code formatting
+3. Add docstrings to all functions and classes following Google style
+4. Use type hints wherever possible
+5. Maximum line length: 88 characters
+6. Use descriptive variable and function names
+
+## Testing Guidelines
+
+1. Write tests for all new features and bug fixes
+2. Place tests in the tests/ directory with a matching structure to src/
+3. Name test files with test\_\*.py pattern
+4. Aim for at least 80% test coverage for core functionality
+5. Include both unit tests and integration tests where appropriate
+
+## Versioning and Changelog
+
+1. Update CHANGELOG.md for all notable changes following Keep a Changelog format
+2. Adhere to Semantic Versioning (MAJOR.MINOR.PATCH)
+3. Document all changes before submitting pull requests
+4. Group changes by Added, Changed, Deprecated, Removed, Fixed, Security
+
+## Git Workflow
+
+1. Create feature branches from main for all new work
+2. Use descriptive branch names (feature/add-sentiment-analysis, fix/query-parsing)
+3. Write clear commit messages that explain what and why
+4. Keep pull requests focused on single features or fixes
+5. Reference issue numbers in commits and PRs
+
+## Dependencies Management
+
+1. Add all new dependencies to requirements.txt
+2. Specify version numbers for all dependencies
+3. Document purpose of new dependencies in comments
+4. Consider compatibility with existing dependencies
+
+## Security Best Practices
+
+1. Never commit API keys or credentials
+2. Use .env.example for showing which environment variables are needed
+3. Validate and sanitize all user inputs
+4. Follow principle of least privilege in code design
+
+## Pull Request Process
+
+1. Update documentation for all changes
+2. Add tests for new functionality
+3. Update CHANGELOG.md with your changes
+4. Ensure all tests pass locally before submitting
+5. Use the PR template and fill out all sections
